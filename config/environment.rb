@@ -17,4 +17,16 @@ DB = ActiveRecord::Base.establish_connection(
 
 DB = ActiveRecord::Base.connection
 
+sql = <<-SQL
+  CREATE TABLE IF NOT EXISTS artists (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  genre TEXT,
+  age INTEGER,
+  hometown TEXT
+  )
+SQL
+ 
+DB.execute(sql)
+
 require_relative "../artist.rb"
