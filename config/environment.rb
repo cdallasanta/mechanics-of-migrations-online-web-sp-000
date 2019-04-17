@@ -12,7 +12,7 @@ Bundler.require
 # put the code to connect to the database here
 DB = ActiveRecord::Base.establish_connection(
   adapter: "sqlite3",
-  database: ""
+  database: "./db/artists"
 )
 
 DB = ActiveRecord::Base.connection
